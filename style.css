@@ -19,7 +19,7 @@
 }
 
 body {
-  background-color: var(--White);
+  background-color: var(--White-200);
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
@@ -48,6 +48,7 @@ h1 {
 }
 h2 {
   color: var(--Grey-500);
+  font-weight: 600;
 }
 
 h1,
