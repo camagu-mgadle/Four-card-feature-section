@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Grey-500: hsl(234, 12%, 34%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+  --White-200: hsl(0, 0%, 99%);
+
+  --Footer: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: var(--White);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container {
+  border-radius: 0.625rem;
+  max-width: 19.765rem;
+  min-height: 100vh;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-section {
+  padding: 0.9rem;
+  text-align: center;
+}
+
+h1 {
+  color: var(--Grey-400);
+  font-weight: 200;
+}
+h2 {
+  color: var(--Grey-500);
+}
+
+h1,
+h2 {
+  font-size: 1.375rem;
+}
+
+.header-info {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--Grey-400);
+  line-height: 1.25;
+}
+
+.card {
+  background-color: var(--White);
+  padding: 2rem;
+  margin: 1.2rem;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  box-shadow: 0px 15px 19px -15px var(--Grey-400);
+}
+
+.card:hover {
+  background-color: var(--White-200);
+}
+
+.supervisor {
+  border-top: 5px solid var(--Cyan);
+}
+.team-builder {
+  border-top: 5px solid var(--Red);
+}
+.karma {
+  border-top: 5px solid var(--Orange);
+}
+.calculator {
+  border-top: 5px solid var(--Blue);
+}
+
+.card-title {
+  color: var(--Grey-500);
+}
+
+.card-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card-info {
+  color: var(--Grey-400);
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+figure {
+  padding-left: 9.4rem;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Footer);
+}
+
+@media (min-width: 48em) {
+  .main-container {
+    max-width: 29.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 4rem;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow-y: hidden;
+    align-items: center;
+  }
+
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  .team-builder {
+    grid-column: 2;
+    grid-row: 1 / span 1;
+  }
+
+  .supervisor {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .karma {
+    grid-column: 2;
+    grid-row: 2 / span 1;
+  }
+  .calculator {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+}
